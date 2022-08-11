@@ -9,6 +9,8 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private float _stepSize;
     [SerializeField] private float _minHeight;
     [SerializeField] private float _maxHeight;
+    
+    
     private Vector3 _targetPosition;
     
 

@@ -17,15 +17,19 @@ public class Spawner : PoolObjects
     private void Update()
     {
         _elapsedTime += Time.deltaTime;
+        
+        _spawnTime -= Time.deltaTime / 100;
 
+       // Debug.Log("SpawnTime: "+ _spawnTime);
+        
         if (_elapsedTime >= _spawnTime)
         {
             if (TryGetObject(out GameObject enemy))
             {
-                _elapsedTime = 0; 
+                _elapsedTime = 0;
 
                 int _numberOfSpawnPoint = Random.Range(0, _spawnPoints.Length);
-                
+
                 SetEnemy(enemy, _spawnPoints[_numberOfSpawnPoint].position);
             }
         }

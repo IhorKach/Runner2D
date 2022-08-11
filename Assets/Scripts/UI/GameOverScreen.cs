@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 [RequireComponent(typeof(CanvasGroup))]
 
@@ -12,6 +13,7 @@ public class GameOverScreen : MonoBehaviour
     [SerializeField] private Button _restartButton;
     [SerializeField] private Button _exitButton;
     [SerializeField] private Player _player;
+
 
     private CanvasGroup _gameOverGroup;
 
@@ -38,6 +40,9 @@ public class GameOverScreen : MonoBehaviour
     {
         _gameOverGroup.alpha = 1;
         Time.timeScale = 0;
+
+        
+
     }
     private void OnRestartButtonClick()
     {
